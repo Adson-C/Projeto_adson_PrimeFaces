@@ -3,8 +3,6 @@ package br.com.framework.interfac.crud;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Query;
-
 import org.hibernate.Session;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
@@ -68,7 +66,9 @@ public interface InterfaceCrud<T> extends Serializable {
 	
 	Long totalRegistro(String table) throws Exception;
 	
-	Query obterQuery(String query) throws Exception;
+	org.hibernate.Query obterQuery(String query) throws Exception;
+	
+	
 	
 	// carregamento dinamico
 	List<T> findListByQueryDinamica(String query, int iniciaNoRegistro, int maximoResultado) throws Exception;
