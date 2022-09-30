@@ -1,4 +1,4 @@
-package br.com.framework.utlis;
+package br.com.framework.utils;
 
 import java.io.Serializable;
 
